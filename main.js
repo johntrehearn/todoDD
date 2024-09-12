@@ -25,9 +25,21 @@ __btnAdd.addEventListener('click', (e) => {
 });
 
 
-function addTask(task){
+function addTask(todo){
     console.log("TASK IS ADDED")
-    // const __todo = document.createElement('li');
-    // __todo.innerText = task;
-    // __todosList.appendChild(__todo);
+    let todoText = __newTask.value;
+
+   if(todo){
+       todoText = todo.text;
+    }
+
+    if(todoText){
+        const element = document.createElement('li');
+
+        if (todo && todo.completed){
+            element.classList.add('completed');
+        }
+     
+    }
+
 }
